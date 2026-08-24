@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-agent-evaluation-harness"
+version = "1.0.0"
+description = "A deterministic verification harness and MCP tool server for coding-agent evaluation"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Mohammed Ibrahim Sadiq" }]
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=2.0,<3.0"]
+
+[project.scripts]
+mcp-eval = "mcp_eval_harness.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
