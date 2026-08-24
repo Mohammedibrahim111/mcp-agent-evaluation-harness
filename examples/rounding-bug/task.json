@@ -1,0 +1,13 @@
+{
+  "task_id": "decimal-rounding-fix",
+  "required_files": ["calculator.py", "test_calculator.py"],
+  "required_patterns": {
+    "calculator.py": ["Decimal", "ROUND_HALF_UP"]
+  },
+  "forbidden_patterns": {
+    "calculator.py": ["round("]
+  },
+  "command": ["python", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py"],
+  "timeout_seconds": 10,
+  "repeat_count": 2
+}
